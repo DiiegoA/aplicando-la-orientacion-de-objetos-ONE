@@ -1,7 +1,7 @@
 
 ## Getting Started
 
-Welcome to the **[Nombre del Proyecto]**. This project is a Java-based system for managing and recommending movies, series, audio content (music, podcasts, and episodes), and purchases. It includes classes to handle titles, ratings, recommendations, and filters, with additional logging and purchase management functionalities.
+Welcome to the **ScreenMatch**. This project is a Java-based system for managing and recommending movies, series, audio content (music, podcasts, and episodes), and purchases. It includes classes to handle titles, ratings, recommendations, and filters, with additional logging and purchase management functionalities.
 
 This project is designed to work seamlessly with **IntelliJ IDEA**.
 
@@ -46,7 +46,7 @@ The compiled output files are generated in the `bin` folder by default.
 
 To run this project in IntelliJ IDEA:
 
-1. **Clone the Repository**: Use `git clone` or download the source code.
+1. **Clone the Repository**: Use `git clone  https://github.com/DiiegoA/aplicando-la-orientacion-de-objetos-ONE.git` or download the source code.
 2. **Open IntelliJ IDEA**: Import the project as a Maven/Gradle project if needed.
 3. **Build the Project**: Go to `Build > Build Project` or press `Ctrl + F9`.
 4. **Run the Application**: Navigate to the relevant `Main.java` or `MainAudio.java` classes depending on the functionality you want to test, right-click, and select `Run` or use the green play button in the toolbar.
