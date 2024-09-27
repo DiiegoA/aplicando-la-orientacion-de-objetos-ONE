@@ -1,32 +1,36 @@
 package com.aluracursos.screenmatch.model;
 
-public class Serie extends Titulo {
-    private int temporadas;
-    private int episodiosPorTemporada;
-    private int minutosPorEpisodio;
+import com.aluracursos.screenmatch.calculos.Puntuacion;
+
+public class Serie extends Titulo implements Puntuacion {
+    private final int temporadas;
+    private final int episodiosPorTemporada;
+
+    public Serie(String tipo, String nombre, int fechaDeLanzamiento, int duracionEnMinutos, boolean incluidoEnElPlan, int temporadas, int episodiosPorTemporada) {
+        super(tipo, nombre, fechaDeLanzamiento, duracionEnMinutos, incluidoEnElPlan);
+        this.temporadas = temporadas;
+        this.episodiosPorTemporada = episodiosPorTemporada;
+    }
 
     // Getters and Setters
     public int getTemporadas() {
         return temporadas;
     }
-    public void setTemporadas(int temporadas) {
-        this.temporadas = temporadas;
-    }
+
     public int getEpisodiosPorTemporada() {
         return episodiosPorTemporada;
-    }
-    public void setEpisodiosPorTemporada(int episodiosPorTemporada) {
-        this.episodiosPorTemporada = episodiosPorTemporada;
-    }
-    public int getMinutosPorEpisodio() {
-        return minutosPorEpisodio;
-    }
-    public void setMinutosPorEpisodio(int minutosPorEpisodio) {
-        this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
     @Override
     public  int getDuracionEnMinutos() {
-        return (temporadas * episodiosPorTemporada * minutosPorEpisodio);
-    }    
+        return (temporadas * episodiosPorTemporada * super.getDuracionEnMinutos());
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Serie: %s, año (%d)", getNombre(), getFechaDeLanzamiento());
+    }
+
+    @Override
+    public int getPuntuacion() { return (int) (calculamedia() / 2); }
 }

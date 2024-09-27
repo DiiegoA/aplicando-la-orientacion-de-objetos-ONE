@@ -1,16 +1,30 @@
 package com.aluracursos.screenmatch.model;
 
-public class Titulo {
+import com.aluracursos.logger.loggerbase.LoggerBase;
+import com.aluracursos.logger.loggerbase.LoggerBaseImpl;
 
-    private String tipo;
-    private String nombre;
-    private int fechaDeLanzamiento;
-    private int duracionEnMinutos;
-    private boolean incluidoEnElPlan;
+public class Titulo implements Comparable<Titulo> {
+
+    private final String tipo;
+    private final String nombre;
+    private final int fechaDeLanzamiento;
+    private final int duracionEnMinutos;
+    private final boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
-    private int totalDeLasEvaluaciones; 
+    private int totalDeLasEvaluaciones;
+    private final LoggerBase logger;
+
+    public Titulo(String tipo, String nombre, int fechaDeLanzamiento, int duracionEnMinutos, boolean incluidoEnElPlan) {
+        this.tipo = tipo;
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+        this.duracionEnMinutos = duracionEnMinutos;
+        this.incluidoEnElPlan = incluidoEnElPlan;
+        this.logger = new LoggerBaseImpl(Titulo.class.getName());
+    }
+
     public void muestraFichaTecnica() {
-        System.out.printf("""
+        logger.logInfo(String.format("""
                 %nTipo: %s
                 Titulo: %s
                 Fecha de lanzamiento: %d
@@ -21,7 +35,7 @@ public class Titulo {
                 getNombre(),
                 getFechaDeLanzamiento(),
                 getDuracionEnMinutos(),
-                isIncluidoEnElPlan());
+                isIncluidoEnElPlan()));
     }
 
 
@@ -58,23 +72,8 @@ public class Titulo {
         return tipo;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public void setFechaDeLanzamiento(int fechaDeLanzamiento){
-        this.fechaDeLanzamiento = fechaDeLanzamiento;
-    }
-
-    public void setDuracionEnMinutos(int duracionEnMinutos){
-        this.duracionEnMinutos = duracionEnMinutos;
-    }
-
-    public void setIncluidoEnElPlan(boolean incluidoEnElPlan){
-        this.incluidoEnElPlan = incluidoEnElPlan;
-    }
-
-    public void setTipo(String tipo){
-        this.tipo = tipo;
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }
