@@ -46,7 +46,10 @@ The compiled output files are generated in the `bin` folder by default.
 
 To run this project in IntelliJ IDEA:
 
-1. **Clone the Repository**: Use ```git clone  https://github.com/DiiegoA/aplicando-la-orientacion-de-objetos-ONE.git``` or download the source code.
+1. **Clone the Repository**: Use
+    ```bash
+   git clone  https://github.com/DiiegoA/aplicando-la-orientacion-de-objetos-ONE.git
+   ```
 2. **Open IntelliJ IDEA**: Import the project as a Maven/Gradle project if needed.
 3. **Build the Project**: Go to `Build > Build Project` or press `Ctrl + F9`.
 4. **Run the Application**: Navigate to the relevant `Main.java` or `MainAudio.java` classes depending on the functionality you want to test, right-click, and select `Run` or use the green play button in the toolbar.
