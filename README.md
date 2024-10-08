@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ScreenMatch Media Management Application
 
 ## Overview
@@ -37,6 +38,18 @@ The ScreenMatch application comes equipped with the following key features:
   - Movie titles, episode numbers, and descriptions.
   - Planets and their characteristics (climate, terrain, population).
   - Directors and producers of Star Wars movies.
+=======
+
+## Getting Started
+
+Welcome to the **ScreenMatch**. This project is a Java-based system for managing and recommending movies, series, audio content (music, podcasts, and episodes), and purchases. It includes classes to handle titles, ratings, recommendations, and filters, with additional logging and purchase management functionalities.
+
+This project is designed to work seamlessly with **IntelliJ IDEA**.
+
+## Folder Structure
+
+The project follows a structured format with the following key files and directories:
+>>>>>>> 26a64fa586ace7b742feda70b2620d469e72a0f2
 
 ### **4. Purchase Management**
 - Tracks user purchases related to media, such as buying movies or subscribing to podcast services.
@@ -68,7 +81,21 @@ To run the ScreenMatch application, ensure your system meets the following requi
 
 ## How to Run
 
+<<<<<<< HEAD
 ### Step 1: Clone the Repository
 Begin by cloning the project repository to your local machine using the following command:
 ```bash
 git clone https://github.com/DiiegoA/aplicando-la-orientacion-de-objetos-ONE.git
+=======
+1. **Clone the Repository**: Use
+    ```bash
+   git clone  https://github.com/DiiegoA/aplicando-la-orientacion-de-objetos-ONE.git
+   ```
+2. **Open IntelliJ IDEA**: Import the project as a Maven/Gradle project if needed.
+3. **Build the Project**: Go to `Build > Build Project` or press `Ctrl + F9`.
+4. **Run the Application**: Navigate to the relevant `Main.java` or `MainAudio.java` classes depending on the functionality you want to test, right-click, and select `Run` or use the green play button in the toolbar.
+
+## Dependency Management
+
+Dependencies are handled via **IntelliJ's build tools**, which might include Maven or Gradle. If your project includes external libraries, they should be added to the `lib` folder or managed via IntelliJ’s project settings.
+>>>>>>> 26a64fa586ace7b742feda70b2620d469e72a0f2
