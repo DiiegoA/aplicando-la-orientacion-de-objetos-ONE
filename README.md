@@ -37,7 +37,6 @@ The ScreenMatch application comes equipped with the following key features:
   - Movie titles, episode numbers, and descriptions.
   - Planets and their characteristics (climate, terrain, population).
   - Directors and producers of Star Wars movies.
-=======
 
 ## Getting Started
 
