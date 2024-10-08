@@ -29,8 +29,8 @@ public class LoggerBaseImpl implements LoggerBase {
     }
 
     @Override
-    public void logInfo(String message) {
-        logger.info(message);
+    public void logInfo(Object message) {  // Cambiado a Object
+        logger.info(String.valueOf(message));  // Convierte cualquier objeto en String
     }
 
     @Override

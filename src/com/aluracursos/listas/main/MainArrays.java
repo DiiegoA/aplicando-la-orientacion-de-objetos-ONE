@@ -34,19 +34,19 @@ public class MainArrays {
 
         Listas listas = new Listas();
 
-        Pelicula deadPool = new Pelicula("Pelicula","Deadpool", 2016, 108, true, "Tim Miller");
+        Pelicula deadPool = new Pelicula("Pelicula","Deadpool", "2016", 108, true, "Tim Miller");
         deadPool.evalua(9);
 
-        Pelicula theWolverine = new Pelicula("Pelicula", "theWolverine", 2013, 126, true, "James Mangold");
+        Pelicula theWolverine = new Pelicula("Pelicula", "theWolverine", "2013", 126, true, "James Mangold");
         theWolverine.evalua(5);
 
-        var matrix = new Pelicula("Pelicula", "Matrix", 1999, 136, false, "Wachowski");
+        var matrix = new Pelicula("Pelicula", "Matrix", "1999", 136, false, "Wachowski");
         matrix.evalua(10);
 
-        Serie toLoveRu = new Serie("Serie","To Love Ru", 2006, 24, true, 1, 25);
+        Serie toLoveRu = new Serie("Serie","To Love Ru", "2006", 24, true, 1, 25, "Takahiro Kawakami");
         toLoveRu.evalua(5);
 
-        Serie swordArtOnline = new Serie("Serie","swordArtOnline", 2012, 24, true, 1, 26);
+        Serie swordArtOnline = new Serie("Serie","swordArtOnline", "2012", 24, true, 1, 26, "Tomohiko Itou");
         swordArtOnline.evalua(10);
 
         ArrayList<Titulo> listaTitulos = new ArrayList<>();

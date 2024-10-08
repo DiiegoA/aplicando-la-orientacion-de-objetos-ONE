@@ -4,7 +4,7 @@ import com.aluracursos.ejercicio2.model.Compra;
 
 import java.util.*;
 
-public class GestionCompras {
+public class GestionComprasMain {
     public static void main(String[] args) {
 
         // Crear una instancia de Compra (solo para invocar métodos)

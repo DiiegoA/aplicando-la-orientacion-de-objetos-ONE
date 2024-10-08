@@ -6,8 +6,8 @@ public class Serie extends Titulo implements Puntuacion {
     private final int temporadas;
     private final int episodiosPorTemporada;
 
-    public Serie(String tipo, String nombre, int fechaDeLanzamiento, int duracionEnMinutos, boolean incluidoEnElPlan, int temporadas, int episodiosPorTemporada) {
-        super(tipo, nombre, fechaDeLanzamiento, duracionEnMinutos, incluidoEnElPlan);
+    public Serie(String tipo, String nombre, String fechaDeLanzamiento, int duracionEnMinutos, boolean incluidoEnElPlan, int temporadas, int episodiosPorTemporada, String director) {
+        super(tipo, nombre, fechaDeLanzamiento, duracionEnMinutos, incluidoEnElPlan, director);
         this.temporadas = temporadas;
         this.episodiosPorTemporada = episodiosPorTemporada;
     }
@@ -22,13 +22,14 @@ public class Serie extends Titulo implements Puntuacion {
     }
 
     @Override
-    public  int getDuracionEnMinutos() {
-        return (temporadas * episodiosPorTemporada * super.getDuracionEnMinutos());
+    public int getDuracionEnMinutos(){
+        return getTemporadas() * getEpisodiosPorTemporada() * getDuracionEnMinutos();
+
     }
 
     @Override
     public String toString() {
-        return String.format("Serie: %s, año (%d)", getNombre(), getFechaDeLanzamiento());
+        return String.format("Serie: %s, año (%s)", getNombre(), getFechaDeLanzamiento());
     }
 
     @Override

@@ -9,14 +9,14 @@ import com.aluracursos.screenmatch.model.Serie;
 public class Main {
     public static void main(String[] args) {
         
-        Pelicula deadPool = new Pelicula("Pelicula","Deadpool", 2016, 108, true, "Tim Miller");
+        Pelicula deadPool = new Pelicula("Pelicula","Deadpool", "2016", 108, true, "Tim Miller");
 
         deadPool.muestraFichaTecnica();
         deadPool.imprimirDirector();
         deadPool.evalua(10);
 
 
-        Serie toLoveRu = new Serie("Serie","To Love Ru", 2006, 24, true, 1, 26);
+        Serie toLoveRu = new Serie("Serie","To Love Ru", "2006", 24, true, 1, 26, "Takahiro Kawakami");
 
         toLoveRu.muestraFichaTecnica();
 
@@ -43,14 +43,14 @@ public class Main {
         miFiltroRecomendacion.filtra(miEpisodio);
 
 
-        Pelicula theWolverine = new Pelicula("Pelicula", "theWolverine", 2013, 126, true, "James Mangold");
+        Pelicula theWolverine = new Pelicula("Pelicula", "theWolverine", "2013", 126, true, "James Mangold");
 
         theWolverine.muestraFichaTecnica();
         theWolverine.imprimirDirector();
         theWolverine.evalua(10);
 
 
-        var matrix = new Pelicula("Pelicula", "Matrix", 1999, 136, false, "Wachowski");
+        var matrix = new Pelicula("Pelicula", "Matrix", "1999", 136, false, "Wachowski");
 
         matrix.muestraFichaTecnica();
         matrix.imprimirDirector();
